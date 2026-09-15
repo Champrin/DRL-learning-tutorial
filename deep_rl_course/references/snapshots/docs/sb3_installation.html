@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="readthedocs-addons-api-version" content="1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; Stable Baselines3 2.9.2a0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/baselines_theme.css?v=23ee7d75" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a8a865bb"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <script src="../_static/js/versions.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting Started" href="quickstart.html" />
+    <link rel="prev" title="Stable-Baselines3 Docs - Reliable Reinforcement Learning Implementations" href="../index.html" /> 
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="stable-baselines3" /><meta name="readthedocs-version-slug" content="master" /><meta name="readthedocs-resolver-filename" content="/guide/install.html" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Stable Baselines3
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="switch-menus">
+                <div class="version-switch"></div>
+                <div class="language-switch"></div>
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stable-release">Stable Release</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bleeding-edge-version">Bleeding-edge version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development-version">Development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-docker-images">Using Docker Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#use-built-images">Use Built Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-the-docker-images">Build the Docker Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-images-cpu-gpu">Run the images (CPU/GPU)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rl_tips.html">Reinforcement Learning Tips and Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rl.html">Reinforcement Learning Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algos.html">RL Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vec_envs.html">Vectorized Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_policy.html">Policy Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_env.html">Using Custom Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="callbacks.html">Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tensorboard.html">Tensorboard Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integrations.html">Integrations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rl_zoo.html">RL Baselines3 Zoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sb3_contrib.html">SB3 Contrib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sbx.html">Stable Baselines Jax (SBX)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imitation.html">Imitation Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migration.html">Migrating from Stable-Baselines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="checking_nan.html">Dealing with NaNs and infs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="save_format.html">On saving and loading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">Exporting models</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RL Algorithms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules/base.html">Base RL Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/a2c.html">A2C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/ddpg.html">DDPG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/dqn.html">DQN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/her.html">HER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/ppo.html">PPO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/sac.html">SAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/td3.html">TD3</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Common</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../common/atari_wrappers.html">Atari Wrappers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/env_util.html">Environments Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/envs.html">Custom Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/distributions.html">Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/evaluation.html">Evaluation Helper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/env_checker.html">Gym Environment Checker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/monitor.html">Monitor Wrapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/logger.html">Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/noise.html">Action Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/utils.html">Utils</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/projects.html">Projects</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Stable Baselines3</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide/install.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="installation">
+<span id="install"></span><h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<p>Stable-Baselines3 requires python 3.10+ and PyTorch &gt;= 2.8</p>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
+<p>We recommend using <a class="reference external" href="https://github.com/conda-forge/miniforge#windows">miniforge</a> for Windows users for easier installation of Python packages and required libraries. You need an environment with Python version 3.10 or above.</p>
+<p>For a quick start you can move straight to installing Stable-Baselines3 in the next step.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Trying to create Atari environments may result in vague errors related to missing DLL files and modules. This is an
+issue with atari-py package. <a class="reference external" href="https://github.com/openai/atari-py/issues/65">See this discussion for more information</a>.</p>
+</div>
+</section>
+<section id="stable-release">
+<h3>Stable Release<a class="headerlink" href="#stable-release" title="Link to this heading"></a></h3>
+<p>To install Stable Baselines3 with pip, execute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span><span class="s1">'stable-baselines3[extra]'</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some shells such as Zsh require quotation marks around brackets, i.e. <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">'stable-baselines3[extra]'</span></code> <a class="reference external" href="https://stackoverflow.com/a/30539963">More information</a>.</p>
+</div>
+<p>This includes optional dependencies like Tensorboard, OpenCV or <code class="docutils literal notranslate"><span class="pre">ale-py</span></code> to train on Atari games. If you do not need those, you can use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>stable-baselines3
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need to work with OpenCV on a machine without a X-server (for instance inside a docker image),
+you will need to install <code class="docutils literal notranslate"><span class="pre">opencv-python-headless</span></code>, see <a class="reference external" href="https://github.com/DLR-RM/stable-baselines3/issues/298">issue #298</a>.</p>
+</div>
+</section>
+</section>
+<section id="bleeding-edge-version">
+<h2>Bleeding-edge version<a class="headerlink" href="#bleeding-edge-version" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/DLR-RM/stable-baselines3
+</pre></div>
+</div>
+<p>with extras:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">"stable_baselines3[extra,tests,docs] @ git+https://github.com/DLR-RM/stable-baselines3"</span>
+</pre></div>
+</div>
+</section>
+<section id="development-version">
+<h2>Development version<a class="headerlink" href="#development-version" title="Link to this heading"></a></h2>
+<p>To contribute to Stable-Baselines3, with support for running tests and building the documentation.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/DLR-RM/stable-baselines3<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>stable-baselines3
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s1">'.[docs,tests,extra]'</span>
+</pre></div>
+</div>
+</section>
+<section id="using-docker-images">
+<h2>Using Docker Images<a class="headerlink" href="#using-docker-images" title="Link to this heading"></a></h2>
+<p>If you are looking for docker images with stable-baselines already installed in it,
+we recommend using images from <a class="reference external" href="https://github.com/DLR-RM/rl-baselines3-zoo">RL Baselines3 Zoo</a>.</p>
+<p>Otherwise, the following images contained all the dependencies for stable-baselines3 but not the stable-baselines3 package itself.
+They are made for development.</p>
+<section id="use-built-images">
+<h3>Use Built Images<a class="headerlink" href="#use-built-images" title="Link to this heading"></a></h3>
+<p>GPU image (requires <a class="reference external" href="https://github.com/NVIDIA/nvidia-docker">nvidia-docker</a>):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>stablebaselines/stable-baselines3
+</pre></div>
+</div>
+<p>CPU only:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>stablebaselines/stable-baselines3-cpu
+</pre></div>
+</div>
+</section>
+<section id="build-the-docker-images">
+<h3>Build the Docker Images<a class="headerlink" href="#build-the-docker-images" title="Link to this heading"></a></h3>
+<p>Build GPU image (with nvidia-docker):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>docker-gpu
+</pre></div>
+</div>
+<p>Build CPU image:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>docker-cpu
+</pre></div>
+</div>
+<p>Note: if you are using a proxy, you need to pass extra params during
+build and do some <a class="reference external" href="https://stackoverflow.com/questions/23111631/cannot-download-docker-images-behind-a-proxy">tweaks</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>--network<span class="o">=</span>host<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">HTTPS_PROXY</span><span class="o">=</span>https://your.proxy.fr:8080/<span class="w"> </span>--build-arg<span class="w"> </span><span class="nv">https_proxy</span><span class="o">=</span>https://your.proxy.fr:8080/
+</pre></div>
+</div>
+</section>
+<section id="run-the-images-cpu-gpu">
+<h3>Run the images (CPU/GPU)<a class="headerlink" href="#run-the-images-cpu-gpu" title="Link to this heading"></a></h3>
+<p>Run the nvidia-docker GPU image</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--runtime<span class="o">=</span>nvidia<span class="w"> </span>--rm<span class="w"> </span>--network<span class="w"> </span>host<span class="w"> </span>--ipc<span class="o">=</span>host<span class="w"> </span>--name<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--mount<span class="w"> </span><span class="nv">src</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">"</span>,target<span class="o">=</span>/home/mamba/stable-baselines3,type<span class="o">=</span><span class="nb">bind</span><span class="w"> </span>stablebaselines/stable-baselines3<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'cd /home/mamba/stable-baselines3/ &amp;&amp; pytest tests/'</span>
+</pre></div>
+</div>
+<p>Or, with the shell file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./scripts/run_docker_gpu.sh<span class="w"> </span>pytest<span class="w"> </span>tests/
+</pre></div>
+</div>
+<p>Run the docker CPU image</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--network<span class="w"> </span>host<span class="w"> </span>--ipc<span class="o">=</span>host<span class="w"> </span>--name<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--mount<span class="w"> </span><span class="nv">src</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">"</span>,target<span class="o">=</span>/home/mamba/stable-baselines3,type<span class="o">=</span><span class="nb">bind</span><span class="w"> </span>stablebaselines/stable-baselines3-cpu<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">'cd /home/mamba/stable-baselines3/ &amp;&amp; pytest tests/'</span>
+</pre></div>
+</div>
+<p>Or, with the shell file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./scripts/run_docker_cpu.sh<span class="w"> </span>pytest<span class="w"> </span>tests/
+</pre></div>
+</div>
+<p>Explanation of the docker command:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span></code> create an instance of an image (=container), and
+run it interactively (so ctrl+c will work)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--rm</span></code> option means to remove the container once it exits/stops
+(otherwise, you will have to use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">rm</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--network</span> <span class="pre">host</span></code> don’t use network isolation, this allows to use
+tensorboard/visdom on host machine</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--ipc=host</span></code> Use the host system’s IPC namespace. IPC (POSIX/SysV IPC) namespace provides
+separation of named shared memory segments, semaphores and message
+queues.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--name</span> <span class="pre">test</span></code> give explicitly the name <code class="docutils literal notranslate"><span class="pre">test</span></code> to the container,
+otherwise it will be assigned a random name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--mount</span> <span class="pre">src=...</span></code> give access of the local directory (<code class="docutils literal notranslate"><span class="pre">pwd</span></code>
+command) to the container (it will be map to <code class="docutils literal notranslate"><span class="pre">/home/mamba/stable-baselines</span></code>), so
+all the logs created in the container in this folder will be kept</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">-c</span> <span class="pre">'...'</span></code> Run command inside the docker image, here run the tests
+(<code class="docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">tests/</span></code>)</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Stable-Baselines3 Docs - Reliable Reinforcement Learning Implementations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="quickstart.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2026, Stable Baselines3.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

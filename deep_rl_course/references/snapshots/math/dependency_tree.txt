@@ -1,0 +1,60 @@
+数学依赖图
+========
+
+微积分基础 Calculus
+├── 导数与偏导数
+│   ├── 链式法则 chain rule
+│   │   ├── log-derivative trick: ∇θ log πθ(a|s)
+│   │   │   └── 策略梯度 policy gradient
+│   │   └── 反向传播 / 神经网络梯度
+│   └── 数值梯度与优化
+└── 积分 / 求和
+    └── 期望 expectation
+
+线性代数 Linear Algebra
+├── 向量、矩阵、内积、范数
+├── 矩阵求导 / Jacobian
+└── 多元高斯 N(μ, Σ)
+    └── 高斯策略 πθ(a|s) = N(μθ(s), Σθ)
+
+概率论 Probability
+├── 随机变量 / PMF / PDF / CDF
+├── 联合、边缘、条件概率
+│   ├── 链式法则 p(x1:n)=∏p(xi|x<i)
+│   └── 马尔可夫性 p(s_{t+1}|s_t,a_t,...)=p(s_{t+1}|s_t,a_t)
+│       └── MDP (S, A, P, r, γ)
+├── 期望 / 条件期望 / 方差
+│   ├── 期望回报 J(π)
+│   ├── Bellman 期望方程
+│   │   ├── Vπ(s), Qπ(s,a)
+│   │   ├── Bellman 最优方程 V*, Q*
+│   │   └── TD learning / bootstrapping
+│   └── 方差缩减 → baseline → advantage A(s,a)=Q−V
+├── 采样与蒙特卡洛估计
+│   ├── 样本均值估计期望
+│   ├── 重要性采样 ratio
+│   │   └── PPO clipped objective
+│   └── 重参数化技巧
+│       └── SAC
+└── 熵 / KL 散度
+    ├── 最大熵 RL
+    │   └── SAC soft Bellman / max-entropy objective
+    └── 策略约束
+        └── TRPO 信赖域 → PPO 近似
+
+优化 Optimization
+├── 梯度下降 / 随机梯度下降
+├── 数值稳定性、收敛性
+└── 约束优化 / 近似优化
+    ├── TRPO
+    └── PPO
+
+策略方法依赖链
+概率 + 期望 + 链式法则 + log-derivative trick
+└── Policy Gradient Theorem: ∇θJ(πθ)=E[∇θ log πθ(a|s) Qπ(s,a)]
+    ├── REINFORCE / reward-to-go
+    ├── baseline / advantage
+    │   └── GAE(λ): TD-error 指数加权，bias-variance tradeoff
+    │       └── PPO: advantage + importance ratio + clipping
+    └── 最大熵目标 + 重参数化 + Gaussian policy
+        └── SAC

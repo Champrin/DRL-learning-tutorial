@@ -1,0 +1,252 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="readthedocs-addons-api-version" content="1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SB3 Contrib &mdash; Stable Baselines3 2.9.2a0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/baselines_theme.css?v=23ee7d75" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a8a865bb"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <script src="../_static/js/versions.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Stable Baselines Jax (SBX)" href="sbx.html" />
+    <link rel="prev" title="RL Baselines3 Zoo" href="rl_zoo.html" /> 
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="stable-baselines3" /><meta name="readthedocs-version-slug" content="master" /><meta name="readthedocs-resolver-filename" content="/guide/sb3_contrib.html" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Stable Baselines3
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="switch-menus">
+                <div class="version-switch"></div>
+                <div class="language-switch"></div>
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rl_tips.html">Reinforcement Learning Tips and Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rl.html">Reinforcement Learning Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algos.html">RL Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vec_envs.html">Vectorized Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_policy.html">Policy Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_env.html">Using Custom Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="callbacks.html">Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tensorboard.html">Tensorboard Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integrations.html">Integrations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rl_zoo.html">RL Baselines3 Zoo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SB3 Contrib</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-create-this-repository">Why create this repository?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sbx.html">Stable Baselines Jax (SBX)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imitation.html">Imitation Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migration.html">Migrating from Stable-Baselines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="checking_nan.html">Dealing with NaNs and infs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="save_format.html">On saving and loading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">Exporting models</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RL Algorithms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules/base.html">Base RL Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/a2c.html">A2C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/ddpg.html">DDPG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/dqn.html">DQN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/her.html">HER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/ppo.html">PPO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/sac.html">SAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/td3.html">TD3</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Common</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../common/atari_wrappers.html">Atari Wrappers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/env_util.html">Environments Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/envs.html">Custom Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/distributions.html">Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/evaluation.html">Evaluation Helper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/env_checker.html">Gym Environment Checker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/monitor.html">Monitor Wrapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/logger.html">Logger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/noise.html">Action Noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common/utils.html">Utils</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/projects.html">Projects</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Stable Baselines3</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">SB3 Contrib</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide/sb3_contrib.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="sb3-contrib">
+<span id="id1"></span><h1>SB3 Contrib<a class="headerlink" href="#sb3-contrib" title="Link to this heading"></a></h1>
+<p>We implement experimental features in a separate contrib repository:
+<a class="reference external" href="https://github.com/Stable-Baselines-Team/stable-baselines3-contrib">SB3-Contrib</a></p>
+<p>This allows Stable-Baselines3 (SB3) to maintain a stable and compact core, while still
+providing the latest features, like RecurrentPPO (PPO LSTM), Truncated Quantile Critics (TQC), Augmented Random Search (ARS), Trust Region Policy Optimization (TRPO) or
+Quantile Regression DQN (QR-DQN).</p>
+<section id="why-create-this-repository">
+<h2>Why create this repository?<a class="headerlink" href="#why-create-this-repository" title="Link to this heading"></a></h2>
+<p>Over the span of stable-baselines and stable-baselines3, the community
+has been eager to contribute in form of better logging utilities,
+environment wrappers, extended support (e.g. different action spaces)
+and learning algorithms.</p>
+<p>However sometimes these utilities were too niche to be considered for
+stable-baselines or proved to be too difficult to integrate well into
+the existing code without creating a mess. sb3-contrib aims to fix this by not
+requiring the neatest code integration with existing code and not
+setting limits on what is too niche: almost everything remotely useful
+goes!
+We hope this allows us to provide reliable implementations
+following stable-baselines usual standards (consistent style, documentation, etc)
+beyond the relatively small scope of utilities in the main repository.</p>
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h3>
+<p>See documentation for the full list of included features.</p>
+<p><strong>RL Algorithms</strong>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://arxiv.org/abs/1803.07055">Augmented Random Search (ARS)</a></p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/1710.10044">Quantile Regression DQN (QR-DQN)</a></p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2006.14171">PPO with invalid action masking (Maskable PPO)</a></p></li>
+<li><p><a class="reference external" href="https://iclr-blog-track.github.io/2022/03/25/ppo-implementation-details/">PPO with recurrent policy (RecurrentPPO aka PPO LSTM)</a></p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2005.04269">Truncated Quantile Critics (TQC)</a></p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/1502.05477">Trust Region Policy Optimization (TRPO)</a></p></li>
+<li><p><a class="reference external" href="https://openreview.net/forum?id=PczQtTsTIX">Batch Normalization in Deep Reinforcement Learning (CrossQ)</a></p></li>
+</ul>
+<p><strong>Gym Wrappers</strong>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://arxiv.org/abs/1712.00378">Time Feature Wrapper</a></p></li>
+</ul>
+</section>
+<section id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h3>
+<p>Documentation is available online: <a class="reference external" href="https://sb3-contrib.readthedocs.io/">https://sb3-contrib.readthedocs.io/</a></p>
+</section>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h3>
+<p>To install Stable-Baselines3 contrib with pip, execute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sb3</span><span class="o">-</span><span class="n">contrib</span>
+</pre></div>
+</div>
+<p>We recommend to use the <code class="docutils literal notranslate"><span class="pre">master</span></code> version of Stable Baselines3 and SB3-Contrib.</p>
+<p>To install Stable Baselines3 <code class="docutils literal notranslate"><span class="pre">master</span></code> version:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">DLR</span><span class="o">-</span><span class="n">RM</span><span class="o">/</span><span class="n">stable</span><span class="o">-</span><span class="n">baselines3</span>
+</pre></div>
+</div>
+<p>To install Stable Baselines3 contrib <code class="docutils literal notranslate"><span class="pre">master</span></code> version:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Stable</span><span class="o">-</span><span class="n">Baselines</span><span class="o">-</span><span class="n">Team</span><span class="o">/</span><span class="n">stable</span><span class="o">-</span><span class="n">baselines3</span><span class="o">-</span><span class="n">contrib</span>
+</pre></div>
+</div>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h3>
+<p>SB3-Contrib follows the SB3 API and folder structure. So, if you are familiar with SB3,
+using SB3-Contrib should be easy too.</p>
+<p>Here is an example of training a Quantile Regression DQN (QR-DQN) agent on the CartPole environment.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sb3_contrib</span><span class="w"> </span><span class="kn">import</span> <span class="n">QRDQN</span>
+
+<span class="n">policy_kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">n_quantiles</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">QRDQN</span><span class="p">(</span><span class="s2">"MlpPolicy"</span><span class="p">,</span> <span class="s2">"CartPole-v1"</span><span class="p">,</span> <span class="n">policy_kwargs</span><span class="o">=</span><span class="n">policy_kwargs</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">total_timesteps</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">log_interval</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">"qrdqn_cartpole"</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="rl_zoo.html" class="btn btn-neutral float-left" title="RL Baselines3 Zoo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sbx.html" class="btn btn-neutral float-right" title="Stable Baselines Jax (SBX)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2026, Stable Baselines3.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
