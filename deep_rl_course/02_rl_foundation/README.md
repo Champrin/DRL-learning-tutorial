@@ -1,9 +1,3 @@
----
-title: "Stage 2：RL 基础（MDP / Bellman / MC / TD）"
-sort: 3
-permalink: 02_rl_foundation/
----
-
 # Stage 2：RL 基础
 
 > 强化学习的理论根基。**禁止跳过本阶段直接学 PPO/SAC**（课程最高原则 #2）。

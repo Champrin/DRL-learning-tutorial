@@ -1,9 +1,3 @@
----
-title: "Stage 10：部分可观测性"
-sort: 9
-permalink: 08_partial_observability/
----
-
 # Stage 10：部分可观测性
 
 | 子目录 | 主题 |

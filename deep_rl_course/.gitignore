@@ -1,7 +1,6 @@
-# Jekyll 构建产物与缓存
+# Sphinx 构建产物
+_build/
 _site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-vendor/
-Gemfile.lock
+.doctrees/
+__pycache__/
+*.pyc

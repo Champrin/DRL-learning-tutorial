@@ -1,9 +1,3 @@
----
-title: "Stage 1：数学基础"
-sort: 2
-permalink: 01_math/
----
-
 # Stage 1：数学基础
 
 > 覆盖 RL 所需的四类数学工具，每个主题按「直觉 → 推导 → 数值验证」三层展开。
@@ -15,4 +9,4 @@ permalink: 01_math/
 | `calculus/` | 微积分：梯度、链式法则、雅可比矩阵 |
 | `optimization/` | 优化：梯度下降、约束优化、凸性 |
 
-> 📋 本阶段尚未开课，目录已预留。相关证据卡见 [证据卡 · 数学工具](../evidence/cards/math/)。
+> 📋 本阶段尚未开课，目录已预留。相关证据卡见 [证据卡 · 数学工具](../evidence/cards/math/README)。

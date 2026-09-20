@@ -1,9 +1,3 @@
----
-title: "Stage 3-4：基于价值的 RL"
-sort: 4
-permalink: 03_value_based/
----
-
 # Stage 3-4：基于价值的方法
 
 | 子目录 | 主题 |

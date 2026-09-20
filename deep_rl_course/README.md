@@ -1,9 +1,3 @@
----
-title: "Deep RL 从零到机器人行人跟随"
-sort: 0
-permalink: /
----
-
 # Deep RL 从零到机器人行人跟随 — 离线课程库
 
 > 项目类型：多 Agent 科研级学习系统
@@ -28,23 +22,23 @@ permalink: /
 | 阶段 | 内容 | 状态 |
 | --- | --- | --- |
 | Stage 0 | [RL 导论入门测验](00_orientation/exercises/) | ✅ 已完成 |
-| Stage 1 | [数学基础（概率 / 线代 / 微积分 / 优化）](01_math/) | 📋 计划中 |
-| Stage 2 | [MDP / Bellman / MC / TD](02_rl_foundation/) | 📋 计划中 |
-| Stage 3-4 | [Q-learning → DQN](03_value_based/) | 📋 计划中 |
-| Stage 5 | [Policy Gradient](04_policy_gradient/) | 📋 计划中 |
-| Stage 6-7 | [A2C → GAE → PPO](05_actor_critic/) | 📋 计划中 |
-| Stage 8 | [DDPG → TD3 → SAC](06_continuous_control/) | 📋 计划中 |
+| Stage 1 | [数学基础（概率 / 线代 / 微积分 / 优化）](01_math/README) | 📋 计划中 |
+| Stage 2 | [MDP / Bellman / MC / TD](02_rl_foundation/README) | 📋 计划中 |
+| Stage 3-4 | [Q-learning → DQN](03_value_based/README) | 📋 计划中 |
+| Stage 5 | [Policy Gradient](04_policy_gradient/README) | 📋 计划中 |
+| Stage 6-7 | [A2C → GAE → PPO](05_actor_critic/README) | 📋 计划中 |
+| Stage 8 | [DDPG → TD3 → SAC](06_continuous_control/README) | 📋 计划中 |
 | Stage 9-20+ | 工程化 → 机器人行人跟随 → ROS 2 部署 | 📋 计划中 |
 
 ## 关键文件
 
 | 文件 | 说明 |
 | --- | --- |
-| [Source Index](references/index.md) | 所有外部来源的索引（URL + 本地快照 + 可靠性分级） |
-| 证据卡（[官方文档](evidence/cards/docs/) · [论文文献](evidence/cards/lit/) · [数学工具](evidence/cards/math/)） | 每个重要知识点的事实核查卡 |
+| [Source Index](references/index) | 所有外部来源的索引（URL + 本地快照 + 可靠性分级） |
+| 证据卡（[官方文档](evidence/cards/docs/README) · [论文文献](evidence/cards/lit/README) · [数学工具](evidence/cards/math/README)） | 每个重要知识点的事实核查卡 |
 | `state/STATE.yaml` | 当前学习进度（中断后可恢复） |
-| [RL 术语表](glossary/glossary.md) | 已核验定义 |
-| [Phase 0 报告](phase0/) | Phase 0 核验工作完整报告 |
+| [RL 术语表](glossary/glossary) | 已核验定义 |
+| [Phase 0 报告](PHASE0_REPORT) | Phase 0 核验工作完整报告 |
 
 ## 当前状态
 

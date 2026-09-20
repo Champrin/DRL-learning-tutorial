@@ -21,18 +21,15 @@ jobs:
         working-directory: deep_rl_course
     steps:
       - uses: actions/checkout@v4
-      - uses: ruby/setup-ruby@v1
+      - uses: actions/setup-python@v5
         with:
-          ruby-version: "3.2"
-          bundler-cache: true
-          working-directory: deep_rl_course
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: deep_rl_course/requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Build with Sphinx
+        run: sphinx-build -b html . _site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

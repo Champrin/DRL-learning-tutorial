@@ -1,9 +1,3 @@
----
-title: "Stage 8：连续控制"
-sort: 7
-permalink: 06_continuous_control/
----
-
 # Stage 8：连续控制
 
 | 子目录 | 主题 |

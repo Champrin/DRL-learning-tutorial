@@ -1,15 +1,9 @@
----
-title: "Stage 0（RL 导论）术语表"
-sort: 1
-category: "附录"
----
-
 # Stage 0（RL 导论）术语表
 
 > **核验说明**：本表全部条目均于 **2026-09-16** 通过 `curl` 拉取并逐条对照
 > [Spinning Up — Part 1: Key Concepts in RL](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html)
 > 原文措辞后撰写，**未凭记忆书写**。快照存档见
-> [`../references/snapshots/docs/spinningup_rl_intro.html`](../references/snapshots/docs/spinningup_rl_intro.html)
+> `../references/snapshots/docs/spinningup_rl_intro.html`（仓库内离线快照，不随站点发布）
 > （页面 Revision `038665d6`）。
 >
 > 符号一栏遵循该页的记法约定；`s`/`o` 混用问题见文末「符号约定说明」。

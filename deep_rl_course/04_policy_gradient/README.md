@@ -1,9 +1,3 @@
----
-title: "Stage 5：策略梯度"
-sort: 5
-permalink: 04_policy_gradient/
----
-
 # Stage 5：策略梯度
 
 | 子目录 | 主题 |

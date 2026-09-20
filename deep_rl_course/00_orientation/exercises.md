@@ -1,15 +1,9 @@
----
-title: "Stage 0 入门小测验"
-sort: 1
-permalink: "00_orientation/exercises/"
----
-
 # Stage 0 入门小测验
 
 > **范围**：RL 与监督学习的区别、agent / environment / reward / policy / episode 等核心概念。
 > **题量**：10 题（选择 5 题 × 8 分 + 判断 3 题 × 10 分 + 简答 2 题 × 15 分 = 100 分）。
 > **用法**：先闭卷作答，再对照文末参考答案；术语口径以
-> [`../glossary/glossary.md`](../glossary/glossary.md) 为准。
+> [`../glossary/glossary.md`](../glossary/glossary) 为准。
 > **命题依据**：[Spinning Up — Key Concepts in RL](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html)（2026-09-16 核验）。
 
 ---
@@ -171,4 +165,4 @@ RL 目标是选择使**期望回报**最大的策略。C 漏掉了折扣形式�
 - OpenAI Spinning Up, *Part 1: Key Concepts in RL* —
   https://spinningup.openai.com/en/latest/spinningup/rl_intro.html
   （核验日期 2026-09-16；快照 Revision `038665d6`）
-- 术语口径：[`../glossary/glossary.md`](../glossary/glossary.md)
+- 术语口径：[`../glossary/glossary.md`](../glossary/glossary)

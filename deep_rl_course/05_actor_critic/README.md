@@ -1,9 +1,3 @@
----
-title: "Stage 6-7：Actor-Critic 与 PPO"
-sort: 6
-permalink: 05_actor_critic/
----
-
 # Stage 6-7：Actor-Critic 与 PPO
 
 | 子目录 | 主题 |
