@@ -58,3 +58,6 @@ suppress_warnings = ["myst.header"]
 
 # 自定义样式
 html_css_files = ["custom.css"]
+
+# MyST 扩展：dollarmath 解析 $...$ / $$...$$ 数学公式（由 MathJax 渲染）
+myst_enable_extensions = ["dollarmath", "amsmath"]
