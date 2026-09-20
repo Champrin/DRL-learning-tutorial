@@ -1,4 +1,17 @@
+/* ===== 宽屏自适应 =====
+   sphinx_rtd_theme 默认将 .wy-nav-content 限制为 max-width: 800px，
+   宽屏下右侧出现大面积空白。解除限制，让内容随窗口宽度自适应。 */
+.wy-nav-content {
+    max-width: none;
+}
+
+/* 正文阅读区也解除默认限制（保留一定内边距） */
+.wy-nav-content-wrap {
+    max-width: none;
+}
+
 /* 表格响应式：内容过宽时允许横向滚动，避免撑破布局 */
-.wy-table-responsive {
+.wy-table-responsive,
+.rst-content table.docutils {
     overflow-x: auto;
 }
