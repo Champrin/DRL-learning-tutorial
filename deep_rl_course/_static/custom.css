@@ -1,0 +1,4 @@
+/* 表格响应式：内容过宽时允许横向滚动，避免撑破布局 */
+.wy-table-responsive {
+    overflow-x: auto;
+}

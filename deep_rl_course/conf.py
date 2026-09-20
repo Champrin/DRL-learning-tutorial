@@ -42,7 +42,6 @@ exclude_patterns = [
     "papers",
     "state",
     "PHASE0_REPORT.rst.bak",
-    "README.md",  # 内容已并入 index.rst，避免重复文档告警
 ]
 
 language = "zh_CN"
@@ -56,3 +55,6 @@ myst_heading_anchors = 3
 
 # 证据卡等文档为「小节式」结构，允许非 H1 起始标题
 suppress_warnings = ["myst.header"]
+
+# 自定义样式
+html_css_files = ["custom.css"]
