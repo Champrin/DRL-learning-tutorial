@@ -1,3 +1,9 @@
+---
+title: "Source Index（来源索引）"
+sort: 101
+permalink: "references/"
+---
+
 # Source Index（来源索引）
 
 > **用途**：记录本课程引用过的每一份外部来源，做到「每条结论可回溯」。

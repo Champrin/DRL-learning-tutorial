@@ -1,0 +1,7 @@
+# frozen_string_literal: true
+
+# 仅用于本地预览（bundle exec jekyll serve）；GitHub Pages 部署不读取本文件
+source "https://rubygems.org"
+
+gem "jekyll", "~> 4.3"
+gem "jekyll-remote-theme"

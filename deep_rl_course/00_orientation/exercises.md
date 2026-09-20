@@ -1,3 +1,9 @@
+---
+title: "Stage 0 入门小测验"
+sort: 1
+permalink: "00_orientation/exercises/"
+---
+
 # Stage 0 入门小测验
 
 > **范围**：RL 与监督学习的区别、agent / environment / reward / policy / episode 等核心概念。

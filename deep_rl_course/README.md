@@ -1,3 +1,9 @@
+---
+title: "Deep RL 从零到机器人行人跟随"
+sort: 0
+permalink: /
+---
+
 # Deep RL 从零到机器人行人跟随 — 离线课程库
 
 > 项目类型：多 Agent 科研级学习系统
@@ -17,44 +23,28 @@
 4. **反伪理解**：通过 Concept + Math + Code + Experiment 才算掌握。
 5. **不假设 RL 一定最优**：最终算法由 文献 + baseline + 实验 决定。
 
-## 目录结构
+## 课程阶段
 
-```text
-deep_rl_course/
-├── README.md                ← 本文件
-├── 00_orientation/          ← Stage 0：RL 全景地图 + 入门测验
-├── 01_math/                 ← Stage 1：概率 / 线代 / 微积分 / 优化
-├── 02_rl_foundation/        ← Stage 2：MDP / Bellman / MC / TD
-├── 03_value_based/          ← Stage 3-4：Q-learning → DQN
-├── 04_policy_gradient/      ← Stage 5：REINFORCE → Policy Gradient Theorem
-├── 05_actor_critic/         ← Stage 6-7：A2C → GAE → PPO
-├── 06_continuous_control/   ← Stage 8：DDPG → TD3 → SAC
-├── 07_rl_engineering/       ← Stage 9：reward 设计 / 探索 / 归一化 / 调试 / 评估
-├── 08_partial_observability/← Stage 10：POMDP / 历史 / 循环策略
-├── 09_robotics_rl/          ← Stage 11：机器人 RL / sim-to-real / 安全
-├── 10_person_following/     ← Stage 12-17：行人跟随建模与环境
-├── 11_isaac_sim/            ← Stage 18：Isaac Sim / Isaac Lab
-├── 12_ros2_deployment/      ← Stage 19：ROS 2 部署
-├── 13_research/             ← Stage 20+：科研分析与论文审稿
-├── papers/                  ← 论文阅读笔记（审稿式模板）
-├── references/              ← Source Index + 网页/PDF 离线快照
-├── evidence/                ← Evidence Cards（事实核查卡）
-├── state/                   ← 学习进度状态机（STATE.yaml）
-├── exercises/               ← 跨阶段练习
-├── projects/                ← 最终项目代码
-└── glossary/                ← 术语表 / 公式表 / 算法地图
-```
+| 阶段 | 内容 | 状态 |
+| --- | --- | --- |
+| Stage 0 | [RL 导论入门测验](00_orientation/exercises/) | ✅ 已完成 |
+| Stage 1 | [数学基础（概率 / 线代 / 微积分 / 优化）](01_math/) | 📋 计划中 |
+| Stage 2 | [MDP / Bellman / MC / TD](02_rl_foundation/) | 📋 计划中 |
+| Stage 3-4 | [Q-learning → DQN](03_value_based/) | 📋 计划中 |
+| Stage 5 | [Policy Gradient](04_policy_gradient/) | 📋 计划中 |
+| Stage 6-7 | [A2C → GAE → PPO](05_actor_critic/) | 📋 计划中 |
+| Stage 8 | [DDPG → TD3 → SAC](06_continuous_control/) | 📋 计划中 |
+| Stage 9-20+ | 工程化 → 机器人行人跟随 → ROS 2 部署 | 📋 计划中 |
 
 ## 关键文件
 
 | 文件 | 说明 |
 | --- | --- |
-| `references/index.md` | 所有外部来源的索引（URL + 本地快照 + 可靠性分级） |
-| `evidence/cards/` | 每个重要知识点的证据卡（CLAIM/EVIDENCE/VERDICT/CONFIDENCE） |
+| [Source Index](references/index.md) | 所有外部来源的索引（URL + 本地快照 + 可靠性分级） |
+| 证据卡（[官方文档](evidence/cards/docs/) · [论文文献](evidence/cards/lit/) · [数学工具](evidence/cards/math/)） | 每个重要知识点的事实核查卡 |
 | `state/STATE.yaml` | 当前学习进度（中断后可恢复） |
-| `glossary/glossary.md` | RL 术语表（已核验定义） |
-| `00_orientation/exercises.md` | Stage 0 入门小测验 |
-| `PHASE0_REPORT.md` | Phase 0 核验工作完整报告 |
+| [RL 术语表](glossary/glossary.md) | 已核验定义 |
+| [Phase 0 报告](phase0/) | Phase 0 核验工作完整报告 |
 
 ## 当前状态
 
